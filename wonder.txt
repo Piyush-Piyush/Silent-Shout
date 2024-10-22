@@ -1,0 +1,13 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  SIGN-UP ALGORITHM   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+code should effectively handles both scenarios of registering a new user and updating an existing but unverified user account ith a new password and verification code.
+
+if existingUserByEmail exists then 
+    if existingUserByEmail is verified then 
+        success : false   --> email/username is already taken
+    else
+        save the updated user and proceed for verification.
+else
+    create a new user with the provided details
+    save the new user
+ 
