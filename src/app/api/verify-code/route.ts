@@ -1,7 +1,7 @@
 import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/model/user.model";
-import { z } from "zod";
-import { verifySchema } from "@/schemas/verifySchema";
+// import { z } from "zod";
+// import { verifySchema } from "@/schemas/verifySchema";
 
 export async function POST(request: Request) {
 	await dbConnect();
@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 		const { username, code } = await request.json();
 
 		// TIPS : however here we are not using but whenever getting value through url , then use  `decodeURIComponent(username)`  to get the data in proper format.
-
+        
 		const user = await UserModel.findOne({
 			username,
 		});
