@@ -17,7 +17,7 @@ async function dbConnect(): Promise<void> {
 	try {
 		const db = await mongoose.connect(process.env.MONGODB_URI || "", {});  // either use the uri in env or take it as empty string, that will be handeled by the catch block, the '{}' can have additional option, which  we have not given here.
 
-		console.log(db);
+		// console.log(db);
 
 		connection.isConnected = db.connections[0].readyState;
 
